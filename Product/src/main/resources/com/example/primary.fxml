@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="419.0" prefWidth="621.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimaryController">
+   <children>
+      <Button fx:id="playButton" layoutX="273.0" layoutY="381.0" onAction="#playSong" text="Play" AnchorPane.bottomAnchor="13.0">
+         <graphic><ImageView fitHeight="20.0" fitWidth="20.0" preserveRatio="true"><Image url="@../images/basecover.png" /></ImageView></graphic>
+      </Button>
+      <Button fx:id="loopButton" layoutX="364.0" layoutY="381.0" mnemonicParsing="false" onAction="#loopSong" text="Loop" AnchorPane.bottomAnchor="13.0" />
+      <Button fx:id="scramblePlayListButton" layoutX="157.0" layoutY="381.0" mnemonicParsing="false" onAction="#scramblePlayList" text="Scramble" AnchorPane.bottomAnchor="13.0" />
+      <ListView fx:id="playListList" prefHeight="419.0" prefWidth="150.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <ListView fx:id="songList" layoutX="150.0" layoutY="113.0" prefHeight="212.0" prefWidth="472.0" AnchorPane.bottomAnchor="94.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="113.0" />
+      <Slider fx:id="musicSlider" layoutX="164.0" layoutY="334.0" prefHeight="14.0" prefWidth="256.0" AnchorPane.bottomAnchor="71.0" />
+      <Slider fx:id="volumeSlider" layoutX="467.0" layoutY="353.0" AnchorPane.bottomAnchor="71.0" />
+      <Button fx:id="addSong" layoutX="201.0" layoutY="13.0" mnemonicParsing="false" onAction="#addSong" text="Add Song" AnchorPane.topAnchor="13.0" />
+      <Button fx:id="deleteSong" layoutX="195.0" layoutY="46.0" mnemonicParsing="false" onAction="#deleteSong" text="Delete Song" AnchorPane.topAnchor="46.0" />
+      <Button fx:id="skipBackward" layoutX="222.0" layoutY="348.0" mnemonicParsing="false" onAction="#skipSongBackwards" text="&lt;- Skip" AnchorPane.bottomAnchor="46.0" />
+      <Button fx:id="skipForward" layoutX="311.0" layoutY="348.0" mnemonicParsing="false" onAction="#skipSongForwards" text="Skip -&gt;" AnchorPane.bottomAnchor="46.0" />
+      <Button layoutX="509.0" layoutY="348.0" mnemonicParsing="false" onAction="#sortSongs" text="Sort" AnchorPane.bottomAnchor="46.0" />
+      <Button layoutX="350.0" layoutY="47.0" mnemonicParsing="false" onAction="#deletePlayList" text="Delete PlayList" AnchorPane.topAnchor="47.0" />
+      <Button layoutX="356.0" layoutY="16.0" mnemonicParsing="false" onAction="#addPlayList" text="Add PlayList" AnchorPane.topAnchor="16.0" /> <Button layoutX="528.0" layoutY="381.0" mnemonicParsing="false" onAction="#reverseSortSongs" text="reverse Sort" AnchorPane.bottomAnchor="13.0" />
+      <Button layoutX="335.0" layoutY="79.0" mnemonicParsing="false" onAction="#changePlayListIcon" text="Change Playlist Icon" AnchorPane.topAnchor="79.0" />
+      <Button layoutX="179.0" layoutY="81.0" mnemonicParsing="false" onAction="#changeSongIcon" text="Change Song Icon" AnchorPane.topAnchor="81.0" />
+      <Button layoutX="436.0" layoutY="380.0" mnemonicParsing="false" onAction="#searchSong" text="Search Song" AnchorPane.bottomAnchor="14.0" />
+      <VBox fx:id="dropArea" layoutX="504.0" layoutY="26.0" opacity="0.5" prefHeight="83.0" prefWidth="113.0" style="-fx-border-color: black; -fx-border-style: dashed;" AnchorPane.topAnchor="26.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+      <Label layoutX="530.0" layoutY="6.0" prefHeight="17.0" prefWidth="62.0" text="Add mp3" AnchorPane.topAnchor="6.0" />
+   </children>
+</AnchorPane>
