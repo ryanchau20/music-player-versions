@@ -1,7 +1,7 @@
 # JavaFX Music Player
 
 A desktop music player for people who own their music as local MP3 files instead of renting it
-from a streaming service. Built with **Java + JavaFX** and **Maven**.
+from a streaming service. This project was created for my SL computer science IA. Built with **Java + JavaFX** and **Maven**.
 
 Playlists are persisted to a plain text save file — there is no database server to install.
 
